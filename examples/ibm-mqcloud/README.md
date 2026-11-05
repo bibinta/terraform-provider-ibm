@@ -14,6 +14,7 @@ The following data sources are supported:
 * ibm_mqcloud_queue_manager_options
 * ibm_mqcloud_queue_manager
 * ibm_mqcloud_queue_manager_status
+* ibm_mqcloud_capacity_details
 * ibm_mqcloud_application
 * ibm_mqcloud_user
 * ibm_mqcloud_truststore_certificate
@@ -312,6 +313,28 @@ data "ibm_mqcloud_queue_manager_status" "mqcloud_queue_manager_status_instance" 
 | Name | Description |
 |------|-------------|
 | status | The deploying and failed states are not queue manager states, they are states which can occur when the request to deploy has been fired, or with that request has failed without producing a queue manager to have any state. The other states map to the queue manager states. State "ending" is either quiesing or ending immediately. State "ended" is either ended normally or endedimmediately. The others map one to one with queue manager states. |
+
+### Data source: ibm_mqcloud_capacity_details
+
+```hcl
+data "ibm_mqcloud_capacity_details" "mqcloud_capacity_details_instance" {
+  service_instance_guid = var.mqcloud_capacity_details_service_instance_guid
+}
+```
+
+#### Inputs
+
+| Name | Description | Type | Required |
+|------|-------------|------|---------|
+| service_instance_guid | The GUID that uniquely identifies the MQ SaaS Reserved Capacity service instance. | `string` | true |
+
+#### Outputs
+
+| Name | Description |
+|------|-------------|
+| capacity_units | The number of capacity units currently deployed. One capacity unit is 5 VPC. |
+| vpc_entitlement | The VPC entitlement of the service instance, expressed as a raw VPC count (capacity_units x 5). |
+| vpc_usage | The number of VPCs currently consumed by the queue managers deployed in the service instance. |
 
 ### Data source: ibm_mqcloud_application
 

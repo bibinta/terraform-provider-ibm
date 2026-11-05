@@ -978,6 +978,7 @@ func Provider() *schema.Provider {
 			"ibm_mqcloud_queue_manager_options":             mqcloud.DataSourceIbmMqcloudQueueManagerOptions(),
 			"ibm_mqcloud_queue_manager":                     mqcloud.DataSourceIbmMqcloudQueueManager(),
 			"ibm_mqcloud_queue_manager_status":              mqcloud.DataSourceIbmMqcloudQueueManagerStatus(),
+			"ibm_mqcloud_capacity_details":                  mqcloud.DataSourceIbmMqcloudCapacityDetails(),
 			"ibm_mqcloud_application":                       mqcloud.DataSourceIbmMqcloudApplication(),
 			"ibm_mqcloud_user":                              mqcloud.DataSourceIbmMqcloudUser(),
 			"ibm_mqcloud_truststore_certificate":            mqcloud.DataSourceIbmMqcloudTruststoreCertificate(),

@@ -89,6 +89,15 @@ data "ibm_mqcloud_queue_manager_status" "mqcloud_queue_manager_status_instance" 
 // Data source is not linked to a resource instance
 // Uncomment if an existing data source instance exists
 /*
+// Create mqcloud_capacity_details data source
+data "ibm_mqcloud_capacity_details" "mqcloud_capacity_details_instance" {
+  service_instance_guid = var.mqcloud_capacity_details_service_instance_guid
+}
+*/
+
+// Data source is not linked to a resource instance
+// Uncomment if an existing data source instance exists
+/*
 // Create mqcloud_application data source
 data "ibm_mqcloud_application" "mqcloud_application_instance" {
   service_instance_guid = var.data_mqcloud_application_service_instance_guid
