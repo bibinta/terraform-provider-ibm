@@ -172,13 +172,6 @@ variable "mqcloud_queue_manager_status_queue_manager_id" {
   default     = "Queue Manager ID"
 }
 
-// Data source arguments for mqcloud_capacity_details
-variable "mqcloud_capacity_details_service_instance_guid" {
-  description = "The GUID that uniquely identifies the MQaaS Reserved Capacity service instance."
-  type        = string
-  default     = "Service Instance ID"
-}
-
 // Data source arguments for mqcloud_application
 variable "data_mqcloud_application_service_instance_guid" {
   description = "The GUID that uniquely identifies the MQaaS service instance."
@@ -189,6 +182,13 @@ variable "data_mqcloud_application_name" {
   description = "The name of the application - conforming to MQ rules."
   type        = string
   default     = "name"
+}
+
+// Data source arguments for mqcloud_capacity_details
+variable "mqcloud_capacity_details_service_instance_guid" {
+  description = "The GUID that uniquely identifies the MQ SaaS service instance."
+  type        = string
+  default     = "a2b4d4bc-dadb-4637-bcec-9b7d1e723af8"
 }
 
 // Data source arguments for mqcloud_user

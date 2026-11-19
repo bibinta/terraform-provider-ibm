@@ -2,6 +2,8 @@ module github.com/IBM-Cloud/terraform-provider-ibm
 
 go 1.26.8
 
+replace github.com/IBM/mqcloud-go-sdk => github.com/bibinta/mqcloud-go-sdk v0.0.0-20261112033155-bf33d5e31f55
+
 require (
 	github.com/IBM-Cloud/bluemix-go v0.0.0-20260624064701-576d2f801297
 	github.com/IBM-Cloud/container-services-go-sdk v0.0.0-20240725064144-454a2ae23113

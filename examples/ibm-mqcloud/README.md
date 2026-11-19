@@ -326,15 +326,16 @@ data "ibm_mqcloud_capacity_details" "mqcloud_capacity_details_instance" {
 
 | Name | Description | Type | Required |
 |------|-------------|------|---------|
-| service_instance_guid | The GUID that uniquely identifies the MQ SaaS Reserved Capacity service instance. | `string` | true |
+| service_instance_guid | The GUID that uniquely identifies the MQ SaaS service instance. | `string` | true |
 
 #### Outputs
 
 | Name | Description |
 |------|-------------|
-| capacity_units | The number of capacity units currently deployed. One capacity unit is 5 VPC. |
-| vpc_entitlement | The VPC entitlement of the service instance, expressed as a raw VPC count (capacity_units x 5). |
-| vpc_usage | The number of VPCs currently consumed by the queue managers deployed in the service instance. |
+| vpc_entitlement | VPC entitlement. |
+| vpc_usage | VPC usage. |
+| capacity_units | Current deployed capacity units for a Reserved Capacity service instance. |
+| capacity_status | Capacity lifecycle status of a Reserved Capacity service instance, for example `Available`, `Scaling_In_Progress` or `Scaling_Failed`. |
 
 ### Data source: ibm_mqcloud_application
 
